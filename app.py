@@ -244,7 +244,7 @@ with tab_prediction:
                 ]
             }),
             hide_index=True,
-            use_container_width=True
+            width="stretch"
         )
 
     with col2:
@@ -295,7 +295,7 @@ with tab_prediction:
                 ]
             }),
             hide_index=True,
-            use_container_width=True
+            width="stretch"
         )
 
     st.divider()
@@ -404,7 +404,7 @@ with tab_prediction:
     predict = st.button(
         "Predict Groundwater Availability",
         type="primary",
-        use_container_width=True
+        width="stretch"
     )
 
     if predict:
@@ -557,14 +557,14 @@ with tab_analytics:
         .rename("Correlation")
         .round(3)
         .to_frame(),
-        use_container_width=True
+        width="stretch"
     )
 
     st.write("")
 
     st.bar_chart(
         target_corr,
-        use_container_width=True
+        width="stretch"
     )
 
     st.caption(
@@ -635,7 +635,7 @@ with tab_analytics:
 
     st.dataframe(
         correlation.round(3),
-        use_container_width=True
+        width="stretch"
     )
 
     st.caption(
@@ -672,7 +672,7 @@ with tab_model:
 
     st.dataframe(
         results.round(4),
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -771,7 +771,7 @@ with tab_model:
 
         st.image(
             actual_predicted_path,
-            use_container_width=True
+            width="stretch"
         )
 
         st.caption(
@@ -954,7 +954,7 @@ with tab_about:
 
     st.dataframe(
         model_data,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -1014,7 +1014,7 @@ with tab_about:
 
     st.dataframe(
         important_features,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
